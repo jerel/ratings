@@ -57,6 +57,21 @@ This expects your theme img folder to contain both on.png and off.png.
 
 The `{{ if item == 5 and total > 0 }}` statement simply checks to see if we are on the last item and if there is at least one rating. If so it adds another `<li>` that displays how many votes have been placed.
 
+#### "YouTube Like" Slider Bar
+
+It should be trivial to implement a slider that shows the number of "like" votes vs the number of "dislike" votes. I have not used this yet but I'd imagine the 
+tags would look something like this:
+
+	{{ ratings:vote item-id=page:id steps="2" }}
+		{{ if item == 1 }}
+			<a href="{{ url }}">Like</a>
+			{{# Display the bar data and do something with it via css or js #}}
+			{{ count }} of {{ total }}
+		{{ else }}
+			<a href="{{ url }}">Dislike</a>
+		{{ endif }}
+	{{ /ratings:vote }}
+
 #### Available Fields
 
 You may use any of these data tags within the double tag:
