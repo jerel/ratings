@@ -5,6 +5,10 @@ It is inserted into your content using double tags and is therefore very flexibl
 module whether core or third-party. All it needs to work is a numerical id so that it can match the item with 
 its rating.
 
+Only registered users are allowed to rate and if they are not logged in they will be redirected to the login page. Upon login they 
+will be sent back to the location they were trying to vote on. Only one rating is recorded per user regardless of how many times 
+they click a rating. However if they choose a different rating on subsequent submissions their rating will be updated.
+
 ## Installation
 
 Since this plugin requires a table to be created installation is 2 steps. 
